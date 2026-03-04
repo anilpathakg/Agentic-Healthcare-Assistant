@@ -1,0 +1,747 @@
+[
+  {
+    "id": 1,
+    "timestamp": "2026-03-04T13:32:50.122598",
+    "session_id": "ui_direct",
+    "type": "tool_call",
+    "tool_name": "find_doctors_by_specialty",
+    "tool_args": {
+      "specialty": "Cardiologist"
+    },
+    "result_preview": "{\"status\": \"success\", \"specialty_searched\": \"Cardiologist\", \"count\": 2, \"doctors\": [{\"doctor_id\": \"D002\", \"name\": \"Dr. Arun Mehta\", \"specialty\": \"Cardiologist\", \"qualification\": \"MBBS, MD, DM (Cardiology)\", \"hospital\": \"Fortis Hospital, Bangalore\", \"phone\": \"+91-98100-22002\", \"email\": \"arun.mehta@fo",
+    "success": true,
+    "execution_time_ms": 13.43
+  },
+  {
+    "id": 2,
+    "timestamp": "2026-03-04T13:33:09.814288",
+    "session_id": "ui_direct",
+    "type": "tool_call",
+    "tool_name": "find_doctors_by_specialty",
+    "tool_args": {
+      "specialty": "Cardiologist"
+    },
+    "result_preview": "{\"status\": \"success\", \"specialty_searched\": \"Cardiologist\", \"count\": 2, \"doctors\": [{\"doctor_id\": \"D002\", \"name\": \"Dr. Arun Mehta\", \"specialty\": \"Cardiologist\", \"qualification\": \"MBBS, MD, DM (Cardiology)\", \"hospital\": \"Fortis Hospital, Bangalore\", \"phone\": \"+91-98100-22002\", \"email\": \"arun.mehta@fo",
+    "success": true,
+    "execution_time_ms": 15.86
+  },
+  {
+    "id": 3,
+    "timestamp": "2026-03-04T13:33:15.303223",
+    "session_id": "ui_direct",
+    "type": "tool_call",
+    "tool_name": "get_available_slots_for_doctor",
+    "tool_args": {
+      "doctor_id": "D002",
+      "num_days": 7
+    },
+    "result_preview": "{\"status\": \"success\", \"doctor_id\": \"D002\", \"from_date\": \"2026-03-04\", \"to_date\": \"2026-03-11\", \"available_count\": 42, \"slots\": [{\"slot_id\": \"S0055\", \"doctor_id\": \"D002\", \"doctor_name\": \"Dr. Arun Mehta\", \"specialty\": \"Cardiologist\", \"hospital\": \"Fortis Hospital, Bangalore\", \"date\": \"2026-03-04\", \"day",
+    "success": true,
+    "execution_time_ms": 217.3
+  },
+  {
+    "id": 4,
+    "timestamp": "2026-03-04T13:33:21.988851",
+    "session_id": "ui_direct",
+    "type": "tool_call",
+    "tool_name": "book_appointment",
+    "tool_args": {
+      "slot_id": "S0055",
+      "patient_id": "N/A",
+      "patient_name": "Ramesh Kulkarni"
+    },
+    "result_preview": "{\"status\": \"success\", \"message\": \"Appointment booked successfully!\", \"booking_details\": {\"slot_id\": \"S0055\", \"doctor_id\": \"D002\", \"doctor_name\": \"Dr. Arun Mehta\", \"specialty\": \"Cardiologist\", \"hospital\": \"Fortis Hospital, Bangalore\", \"date\": \"2026-03-04\", \"day\": \"Wednesday\", \"time\": \"09:00 AM\", \"pat",
+    "success": true,
+    "execution_time_ms": 584.44
+  },
+  {
+    "id": 5,
+    "timestamp": "2026-03-04T13:35:10.707965",
+    "session_id": "streamlit_1772611505",
+    "type": "tool_call",
+    "tool_name": "list_all_patients",
+    "tool_args": {},
+    "result_preview": "{\"status\": \"success\", \"total_patients\": 6, \"patients\": [{\"Patient_ID\": \"P001\", \"Phone_number\": \"7982179305\", \"Email\": \"rahul16negi@gmail.com\", \"Name\": \"Rahul Negi\", \"Age\": 31.0, \"Gender\": \"Male\", \"Address\": \"Chattarpur\", \"Summary\": \"Rahul is a fit and healthy person. He is doing well in his life\", \"",
+    "success": true,
+    "execution_time_ms": 33.86
+  },
+  {
+    "id": 6,
+    "timestamp": "2026-03-04T13:35:14.565865",
+    "session_id": "streamlit_1772611505",
+    "type": "interaction",
+    "user_input": "how many patients are there",
+    "agent_response": "There are a total of **6 patients** in the system. Here are their names:\n\n1. Rahul Negi\n2. Rebeca Nagle\n3. Ramesh Kulkarni\n4. Anjali Mehra\n5. David Thompson\n6. Mohan Kumar\n\nIf you need more information about any specific patient or any other assistance, feel free to ask!",
+    "tools_used": [
+      "list_all_patients"
+    ],
+    "tool_count": 1,
+    "response_time_ms": 4763.21
+  },
+  {
+    "id": 7,
+    "timestamp": "2026-03-04T13:35:50.163177",
+    "session_id": "default",
+    "type": "evaluation",
+    "query": "how many patients are there",
+    "response_preview": "There are a total of 6 patients in the system. Here are their names:\n\nRahul Negi\nRebeca Nagle\nRamesh Kulkarni\nAnjali Mehra\nDavid Thompson\nMohan Kumar\nIf you need more information about any specific patient or any other assistance, feel free to ask!\n",
+    "scores": {
+      "relevance": 10.0,
+      "accuracy": 10.0,
+      "completeness": 10.0,
+      "clarity": 10.0,
+      "safety": 9.0,
+      "overall": 9.8,
+      "strengths": "The response directly addresses the user's query with accurate patient information.",
+      "improvements": "The AI could include a disclaimer about patient confidentiality when sharing names."
+    },
+    "overall_score": 9.8
+  },
+  {
+    "id": 8,
+    "timestamp": "2026-03-04T13:47:58.474696",
+    "session_id": "streamlit_1772612239",
+    "type": "interaction",
+    "user_input": "what is most common issue among all patients",
+    "agent_response": "The most common issues among patients can vary widely depending on demographics, location, and other factors. However, some of the frequently reported health issues include:\n\n1. **Chronic Diseases**: Conditions like diabetes, hypertension, and heart disease are prevalent among many patients.\n2. **Mental Health Issues**: Anxiety, depression, and stress-related disorders are increasingly common.\n3. **Respiratory Problems**: Asthma and chronic obstructive pulmonary disease (COPD) are significant co",
+    "tools_used": [],
+    "tool_count": 0,
+    "response_time_ms": 4778.02
+  },
+  {
+    "id": 9,
+    "timestamp": "2026-03-04T13:48:12.737039",
+    "session_id": "streamlit_1772612239",
+    "type": "tool_call",
+    "tool_name": "list_all_patients",
+    "tool_args": {},
+    "result_preview": "{\"status\": \"success\", \"total_patients\": 6, \"patients\": [{\"Patient_ID\": \"P001\", \"Phone_number\": \"7982179305\", \"Email\": \"rahul16negi@gmail.com\", \"Name\": \"Rahul Negi\", \"Age\": 31.0, \"Gender\": \"Male\", \"Address\": \"Chattarpur\", \"Summary\": \"Rahul is a fit and healthy person. He is doing well in his life\", \"",
+    "success": true,
+    "execution_time_ms": 27.43
+  },
+  {
+    "id": 10,
+    "timestamp": "2026-03-04T13:48:15.021743",
+    "session_id": "streamlit_1772612239",
+    "type": "interaction",
+    "user_input": "how many patients are there",
+    "agent_response": "There are currently **6 patients** in the system. If you need more information about any specific patient or their records, feel free to ask!",
+    "tools_used": [
+      "list_all_patients"
+    ],
+    "tool_count": 1,
+    "response_time_ms": 3295.79
+  },
+  {
+    "id": 11,
+    "timestamp": "2026-03-04T13:48:35.498579",
+    "session_id": "streamlit_1772612239",
+    "type": "interaction",
+    "user_input": "what kind of issues they have",
+    "agent_response": "Here are the issues and summaries for each of the 6 patients:\n\n1. **Rahul Negi**\n   - **Age**: 31\n   - **Summary**: Rahul is a fit and healthy person. He is doing well in his life.\n\n2. **Rebeca Nagle**\n   - **Age**: 36\n   - **Summary**: No specific medical issues reported.\n\n3. **Ramesh Kulkarni**\n   - **Age**: 65\n   - **Summary**: Patient presents for routine checkup with a history of hypertension. Vitals are stable. Recommended to continue current medication and lifestyle modifications. Routine",
+    "tools_used": [],
+    "tool_count": 0,
+    "response_time_ms": 8365.46
+  },
+  {
+    "id": 12,
+    "timestamp": "2026-03-04T13:49:08.960396",
+    "session_id": "streamlit_1772612239",
+    "type": "tool_call",
+    "tool_name": "search_medical_information",
+    "tool_args": {
+      "query": "fatty liver"
+    },
+    "result_preview": "{\"status\": \"success\", \"query\": \"fatty liver\", \"summary\": \"### Overview\\nFatty liver disease is a condition characterized by the accumulation of fat in the liver. The liver is a vital organ responsible for digesting food, storing energy, and detoxifying harmful substances. There are two primary types",
+    "success": true,
+    "execution_time_ms": 13212.06
+  },
+  {
+    "id": 13,
+    "timestamp": "2026-03-04T13:49:27.364576",
+    "session_id": "streamlit_1772612239",
+    "type": "interaction",
+    "user_input": "pl share lates info on fatty lever",
+    "agent_response": "### Overview of Fatty Liver Disease\n\nFatty liver disease is characterized by the accumulation of fat in the liver. The liver plays a crucial role in digesting food, storing energy, and detoxifying harmful substances. There are two main types of fatty liver disease:\n\n1. **Nonalcoholic Fatty Liver Disease (NAFLD)**: Occurs in individuals who consume little to no alcohol.\n2. **Alcoholic Fatty Liver Disease (AFLD)**: Associated with excessive alcohol consumption.\n\n### Key Symptoms or Features\nFatty ",
+    "tools_used": [
+      "search_medical_information"
+    ],
+    "tool_count": 1,
+    "response_time_ms": 32998.57
+  },
+  {
+    "id": 14,
+    "timestamp": "2026-03-04T14:01:18.887876",
+    "session_id": "ui_direct",
+    "type": "tool_call",
+    "tool_name": "find_doctors_by_specialty",
+    "tool_args": {
+      "specialty": "Cardiologist"
+    },
+    "result_preview": "{\"status\": \"success\", \"specialty_searched\": \"Cardiologist\", \"count\": 2, \"doctors\": [{\"doctor_id\": \"D002\", \"name\": \"Dr. Arun Mehta\", \"specialty\": \"Cardiologist\", \"qualification\": \"MBBS, MD, DM (Cardiology)\", \"hospital\": \"Fortis Hospital, Bangalore\", \"phone\": \"+91-98100-22002\", \"email\": \"arun.mehta@fo",
+    "success": true,
+    "execution_time_ms": 18.8
+  },
+  {
+    "id": 15,
+    "timestamp": "2026-03-04T14:02:03.346447",
+    "session_id": "ui_direct",
+    "type": "tool_call",
+    "tool_name": "find_doctors_by_specialty",
+    "tool_args": {
+      "specialty": "Cardiologist"
+    },
+    "result_preview": "{\"status\": \"success\", \"specialty_searched\": \"Cardiologist\", \"count\": 2, \"doctors\": [{\"doctor_id\": \"D002\", \"name\": \"Dr. Arun Mehta\", \"specialty\": \"Cardiologist\", \"qualification\": \"MBBS, MD, DM (Cardiology)\", \"hospital\": \"Fortis Hospital, Bangalore\", \"phone\": \"+91-98100-22002\", \"email\": \"arun.mehta@fo",
+    "success": true,
+    "execution_time_ms": 12.99
+  },
+  {
+    "id": 16,
+    "timestamp": "2026-03-04T15:16:01.840169",
+    "session_id": "ui_direct",
+    "type": "tool_call",
+    "tool_name": "find_doctors_by_specialty",
+    "tool_args": {
+      "specialty": "Cardiologist"
+    },
+    "result_preview": "{\"status\": \"success\", \"specialty\": \"Cardiologist\", \"doctors\": [{\"doctor_id\": \"D002\", \"name\": \"Dr. Arun Mehta\", \"specialty\": \"Cardiologist\", \"qualification\": \"MBBS, MD, DM (Cardiology)\", \"hospital\": \"Fortis Hospital, Bangalore\", \"phone\": \"+91-98100-22002\", \"email\": \"arun.mehta@fortis.com\", \"experienc",
+    "success": true,
+    "execution_time_ms": 6.48
+  },
+  {
+    "id": 17,
+    "timestamp": "2026-03-04T15:24:23.419795",
+    "session_id": "ui_direct",
+    "type": "tool_call",
+    "tool_name": "find_doctors_by_specialty",
+    "tool_args": {
+      "specialty": "Cardiologist"
+    },
+    "result_preview": "{\"status\": \"success\", \"specialty\": \"Cardiologist\", \"doctors\": [{\"doctor_id\": \"D002\", \"name\": \"Dr. Arun Mehta\", \"specialty\": \"Cardiologist\", \"qualification\": \"MBBS, MD, DM (Cardiology)\", \"hospital\": \"Fortis Hospital, Bangalore\", \"phone\": \"+91-98100-22002\", \"email\": \"arun.mehta@fortis.com\", \"experienc",
+    "success": true,
+    "execution_time_ms": 12.33
+  },
+  {
+    "id": 18,
+    "timestamp": "2026-03-04T15:24:32.666115",
+    "session_id": "ui_direct",
+    "type": "tool_call",
+    "tool_name": "get_available_slots_for_doctor",
+    "tool_args": {
+      "doctor_id": "D002",
+      "num_days": 7
+    },
+    "result_preview": "{\"status\": \"success\", \"doctor_id\": \"D002\", \"slots\": [{\"slot_id\": \"S0009\", \"doctor_id\": \"D002\", \"doctor_name\": \"Dr. Arun Mehta\", \"specialty\": \"Cardiologist\", \"hospital\": \"Fortis Hospital, Bangalore\", \"date\": \"2026-03-04\", \"day\": \"Wednesday\", \"time\": \"09:00\", \"status\": \"available\", \"patient_id\": null,",
+    "success": true,
+    "execution_time_ms": 3.86
+  },
+  {
+    "id": 19,
+    "timestamp": "2026-03-04T15:25:54.383362",
+    "session_id": "ui_direct",
+    "type": "tool_call",
+    "tool_name": "find_doctors_by_specialty",
+    "tool_args": {
+      "specialty": "Diabetologist"
+    },
+    "result_preview": "{\"status\": \"success\", \"specialty\": \"Diabetologist\", \"doctors\": [{\"doctor_id\": \"D004\", \"name\": \"Dr. Vikram Nair\", \"specialty\": \"Diabetologist\", \"qualification\": \"MBBS, MD, Fellowship (Endocrinology)\", \"hospital\": \"Max Healthcare, Delhi\", \"phone\": \"+91-98100-44004\", \"email\": \"vikram.nair@maxhealthcare",
+    "success": true,
+    "execution_time_ms": 1.88
+  },
+  {
+    "id": 20,
+    "timestamp": "2026-03-04T15:26:26.563489",
+    "session_id": "ui_direct",
+    "type": "tool_call",
+    "tool_name": "find_doctors_by_specialty",
+    "tool_args": {
+      "specialty": "Diabetologist"
+    },
+    "result_preview": "{\"status\": \"success\", \"specialty\": \"Diabetologist\", \"doctors\": [{\"doctor_id\": \"D004\", \"name\": \"Dr. Vikram Nair\", \"specialty\": \"Diabetologist\", \"qualification\": \"MBBS, MD, Fellowship (Endocrinology)\", \"hospital\": \"Max Healthcare, Delhi\", \"phone\": \"+91-98100-44004\", \"email\": \"vikram.nair@maxhealthcare",
+    "success": true,
+    "execution_time_ms": 2.96
+  },
+  {
+    "id": 21,
+    "timestamp": "2026-03-04T15:26:32.205310",
+    "session_id": "ui_direct",
+    "type": "tool_call",
+    "tool_name": "get_available_slots_for_doctor",
+    "tool_args": {
+      "doctor_id": "D008",
+      "num_days": 7
+    },
+    "result_preview": "{\"status\": \"success\", \"doctor_id\": \"D008\", \"slots\": [{\"slot_id\": \"S0057\", \"doctor_id\": \"D008\", \"doctor_name\": \"Dr. Suresh Bhat\", \"specialty\": \"Diabetologist\", \"hospital\": \"Narayana Health, Bangalore\", \"date\": \"2026-03-04\", \"day\": \"Wednesday\", \"time\": \"09:00\", \"status\": \"available\", \"patient_id\": nul",
+    "success": true,
+    "execution_time_ms": 2.76
+  },
+  {
+    "id": 22,
+    "timestamp": "2026-03-04T16:22:42.657816",
+    "session_id": "ui_direct",
+    "type": "tool_call",
+    "tool_name": "find_doctors_by_specialty",
+    "tool_args": {
+      "specialty": "General Physician"
+    },
+    "result_preview": "{\"status\": \"success\", \"specialty\": \"General Physician\", \"doctors\": [{\"doctor_id\": \"D001\", \"name\": \"Dr. Priya Sharma\", \"specialty\": \"General Physician\", \"qualification\": \"MBBS, MD (Internal Medicine)\", \"hospital\": \"Apollo Clinic, Pune\", \"phone\": \"+91-98100-11001\", \"email\": \"priya.sharma@apolloclinic.",
+    "success": true,
+    "execution_time_ms": 2.12
+  },
+  {
+    "id": 23,
+    "timestamp": "2026-03-04T16:23:09.440203",
+    "session_id": "ui_direct",
+    "type": "tool_call",
+    "tool_name": "find_doctors_by_specialty",
+    "tool_args": {
+      "specialty": "Cardiologist"
+    },
+    "result_preview": "{\"status\": \"success\", \"specialty\": \"Cardiologist\", \"doctors\": [{\"doctor_id\": \"D002\", \"name\": \"Dr. Arun Mehta\", \"specialty\": \"Cardiologist\", \"qualification\": \"MBBS, MD, DM (Cardiology)\", \"hospital\": \"Fortis Hospital, Bangalore\", \"phone\": \"+91-98100-22002\", \"email\": \"arun.mehta@fortis.com\", \"experienc",
+    "success": true,
+    "execution_time_ms": 1.03
+  },
+  {
+    "id": 24,
+    "timestamp": "2026-03-04T16:23:13.889779",
+    "session_id": "ui_direct",
+    "type": "tool_call",
+    "tool_name": "find_doctors_by_specialty",
+    "tool_args": {
+      "specialty": "General Physician"
+    },
+    "result_preview": "{\"status\": \"success\", \"specialty\": \"General Physician\", \"doctors\": [{\"doctor_id\": \"D001\", \"name\": \"Dr. Priya Sharma\", \"specialty\": \"General Physician\", \"qualification\": \"MBBS, MD (Internal Medicine)\", \"hospital\": \"Apollo Clinic, Pune\", \"phone\": \"+91-98100-11001\", \"email\": \"priya.sharma@apolloclinic.",
+    "success": true,
+    "execution_time_ms": 0.0
+  },
+  {
+    "id": 25,
+    "timestamp": "2026-03-04T16:23:19.956110",
+    "session_id": "ui_direct",
+    "type": "tool_call",
+    "tool_name": "get_available_slots_for_doctor",
+    "tool_args": {
+      "doctor_id": "D001",
+      "num_days": 7
+    },
+    "result_preview": "{\"status\": \"success\", \"doctor_id\": \"D001\", \"slots\": [{\"slot_id\": \"S0001\", \"doctor_id\": \"D001\", \"doctor_name\": \"Dr. Priya Sharma\", \"specialty\": \"General Physician\", \"hospital\": \"Apollo Clinic, Pune\", \"date\": \"2026-03-04\", \"day\": \"Wednesday\", \"time\": \"09:00\", \"status\": \"available\", \"patient_id\": null,",
+    "success": true,
+    "execution_time_ms": 2.15
+  },
+  {
+    "id": 26,
+    "timestamp": "2026-03-04T16:23:30.756696",
+    "session_id": "ui_direct",
+    "type": "tool_call",
+    "tool_name": "book_appointment",
+    "tool_args": {
+      "slot_id": "S0066",
+      "patient_id": "P006",
+      "patient_name": "Mohan Kumar"
+    },
+    "result_preview": "{\"status\": \"success\", \"message\": \"Appointment booked successfully for Mohan Kumar.\", \"booking_details\": {\"slot_id\": \"S0066\", \"patient_id\": \"P006\", \"patient_name\": \"Mohan Kumar\", \"doctor_name\": \"Dr. Priya Sharma\", \"specialty\": \"General Physician\", \"hospital\": \"Apollo Clinic, Pune\", \"date\": \"2026-03-0",
+    "success": true,
+    "execution_time_ms": 0.0
+  },
+  {
+    "id": 27,
+    "timestamp": "2026-03-04T16:23:51.152660",
+    "session_id": "ui_direct",
+    "type": "tool_call",
+    "tool_name": "find_doctors_by_specialty",
+    "tool_args": {
+      "specialty": "General Physician"
+    },
+    "result_preview": "{\"status\": \"success\", \"specialty\": \"General Physician\", \"doctors\": [{\"doctor_id\": \"D001\", \"name\": \"Dr. Priya Sharma\", \"specialty\": \"General Physician\", \"qualification\": \"MBBS, MD (Internal Medicine)\", \"hospital\": \"Apollo Clinic, Pune\", \"phone\": \"+91-98100-11001\", \"email\": \"priya.sharma@apolloclinic.",
+    "success": true,
+    "execution_time_ms": 0.0
+  },
+  {
+    "id": 28,
+    "timestamp": "2026-03-04T16:23:54.809768",
+    "session_id": "ui_direct",
+    "type": "tool_call",
+    "tool_name": "get_available_slots_for_doctor",
+    "tool_args": {
+      "doctor_id": "D001",
+      "num_days": 7
+    },
+    "result_preview": "{\"status\": \"success\", \"doctor_id\": \"D001\", \"slots\": [{\"slot_id\": \"S0001\", \"doctor_id\": \"D001\", \"doctor_name\": \"Dr. Priya Sharma\", \"specialty\": \"General Physician\", \"hospital\": \"Apollo Clinic, Pune\", \"date\": \"2026-03-04\", \"day\": \"Wednesday\", \"time\": \"09:00\", \"status\": \"available\", \"patient_id\": null,",
+    "success": true,
+    "execution_time_ms": 2.55
+  },
+  {
+    "id": 29,
+    "timestamp": "2026-03-04T16:24:54.485505",
+    "session_id": "eval_run",
+    "type": "evaluation",
+    "query": "What are the latest treatments for Type 2 Diabetes",
+    "response_preview": "The latest treatments for Type 2 Diabetes include a combination of lifestyle changes, medications, and advanced monitoring technologies. Here\u2019s a summary of the key treatment options:\n\n### 1. Lifestyle Changes\n- **Diet Modifications**: Adopting a balanced diet that focuses on whole foods, low in ref",
+    "scores": {
+      "relevance": 10.0,
+      "accuracy": 9.0,
+      "completeness": 8.0,
+      "clarity": 9.0,
+      "safety": 10.0,
+      "overall": 9.2,
+      "strengths": "The response provides a comprehensive overview of the latest treatments for Type 2 Diabetes.",
+      "improvements": "The response could include more specific examples of advanced monitoring technologies and recent research findings.",
+      "keyword_coverage": 10.0
+    },
+    "overall_score": 9.2
+  },
+  {
+    "id": 30,
+    "timestamp": "2026-03-04T16:44:10.654561",
+    "session_id": "ui_direct",
+    "type": "tool_call",
+    "tool_name": "find_doctors_by_specialty",
+    "tool_args": {
+      "specialty": "General Physician"
+    },
+    "result_preview": "{\"status\": \"success\", \"specialty\": \"General Physician\", \"doctors\": [{\"doctor_id\": \"D001\", \"name\": \"Dr. Priya Sharma\", \"specialty\": \"General Physician\", \"qualification\": \"MBBS, MD (Internal Medicine)\", \"hospital\": \"Apollo Clinic, Pune\", \"phone\": \"+91-98100-11001\", \"email\": \"priya.sharma@apolloclinic.",
+    "success": true,
+    "execution_time_ms": 4.03
+  },
+  {
+    "id": 31,
+    "timestamp": "2026-03-04T16:44:53.039880",
+    "session_id": "ui_direct",
+    "type": "tool_call",
+    "tool_name": "find_doctors_by_specialty",
+    "tool_args": {
+      "specialty": "General Physician"
+    },
+    "result_preview": "{\"status\": \"success\", \"specialty\": \"General Physician\", \"doctors\": [{\"doctor_id\": \"D001\", \"name\": \"Dr. Priya Sharma\", \"specialty\": \"General Physician\", \"qualification\": \"MBBS, MD (Internal Medicine)\", \"hospital\": \"Apollo Clinic, Pune\", \"phone\": \"+91-98100-11001\", \"email\": \"priya.sharma@apolloclinic.",
+    "success": true,
+    "execution_time_ms": 5.11
+  },
+  {
+    "id": 32,
+    "timestamp": "2026-03-04T16:45:04.031336",
+    "session_id": "ui_direct",
+    "type": "tool_call",
+    "tool_name": "get_available_slots_for_doctor",
+    "tool_args": {
+      "doctor_id": "D001",
+      "num_days": 7
+    },
+    "result_preview": "{\"status\": \"success\", \"doctor_id\": \"D001\", \"slots\": [{\"slot_id\": \"S0001\", \"doctor_id\": \"D001\", \"doctor_name\": \"Dr. Priya Sharma\", \"specialty\": \"General Physician\", \"hospital\": \"Apollo Clinic, Pune\", \"date\": \"2026-03-04\", \"day\": \"Wednesday\", \"time\": \"09:00\", \"status\": \"available\", \"patient_id\": null,",
+    "success": true,
+    "execution_time_ms": 4.0
+  },
+  {
+    "id": 33,
+    "timestamp": "2026-03-04T16:45:22.048950",
+    "session_id": "ui_direct",
+    "type": "tool_call",
+    "tool_name": "book_appointment",
+    "tool_args": {
+      "slot_id": "S0067",
+      "patient_id": "P004",
+      "patient_name": "Anjali Mehra"
+    },
+    "result_preview": "{\"status\": \"success\", \"message\": \"Appointment booked successfully for Anjali Mehra.\", \"booking_details\": {\"slot_id\": \"S0067\", \"patient_id\": \"P004\", \"patient_name\": \"Anjali Mehra\", \"doctor_name\": \"Dr. Priya Sharma\", \"specialty\": \"General Physician\", \"hospital\": \"Apollo Clinic, Pune\", \"date\": \"2026-03",
+    "success": true,
+    "execution_time_ms": 0.0
+  },
+  {
+    "id": 34,
+    "timestamp": "2026-03-04T16:46:16.856124",
+    "session_id": "ui_direct",
+    "type": "tool_call",
+    "tool_name": "find_doctors_by_specialty",
+    "tool_args": {
+      "specialty": "General Physician"
+    },
+    "result_preview": "{\"status\": \"success\", \"specialty\": \"General Physician\", \"doctors\": [{\"doctor_id\": \"D001\", \"name\": \"Dr. Priya Sharma\", \"specialty\": \"General Physician\", \"qualification\": \"MBBS, MD (Internal Medicine)\", \"hospital\": \"Apollo Clinic, Pune\", \"phone\": \"+91-98100-11001\", \"email\": \"priya.sharma@apolloclinic.",
+    "success": true,
+    "execution_time_ms": 5.61
+  },
+  {
+    "id": 35,
+    "timestamp": "2026-03-04T16:46:23.772183",
+    "session_id": "ui_direct",
+    "type": "tool_call",
+    "tool_name": "get_available_slots_for_doctor",
+    "tool_args": {
+      "doctor_id": "D001",
+      "num_days": 7
+    },
+    "result_preview": "{\"status\": \"success\", \"doctor_id\": \"D001\", \"slots\": [{\"slot_id\": \"S0001\", \"doctor_id\": \"D001\", \"doctor_name\": \"Dr. Priya Sharma\", \"specialty\": \"General Physician\", \"hospital\": \"Apollo Clinic, Pune\", \"date\": \"2026-03-04\", \"day\": \"Wednesday\", \"time\": \"09:00\", \"status\": \"available\", \"patient_id\": null,",
+    "success": true,
+    "execution_time_ms": 6.37
+  },
+  {
+    "id": 36,
+    "timestamp": "2026-03-04T16:48:36.752975",
+    "session_id": "ui_direct",
+    "type": "tool_call",
+    "tool_name": "find_doctors_by_specialty",
+    "tool_args": {
+      "specialty": "Cardiologist"
+    },
+    "result_preview": "{\"status\": \"success\", \"specialty\": \"Cardiologist\", \"doctors\": [{\"doctor_id\": \"D002\", \"name\": \"Dr. Arun Mehta\", \"specialty\": \"Cardiologist\", \"qualification\": \"MBBS, MD, DM (Cardiology)\", \"hospital\": \"Fortis Hospital, Bangalore\", \"phone\": \"+91-98100-22002\", \"email\": \"arun.mehta@fortis.com\", \"experienc",
+    "success": true,
+    "execution_time_ms": 15.44
+  },
+  {
+    "id": 37,
+    "timestamp": "2026-03-04T16:48:44.479434",
+    "session_id": "eval_run",
+    "type": "evaluation",
+    "query": "I need to find a cardiologist",
+    "response_preview": "Here are two cardiologists available for consultation:\n\n1. **Dr. Arun Mehta**\n   - **Qualification:** MBBS, MD, DM (Cardiology)\n   - **Hospital:** Fortis Hospital, Bangalore\n   - **Experience:** 18 years\n   - **Consultation Fee:** \u20b91200\n   - **Phone:** +91-98100-22002\n   - **Email:** [arun.mehta@for",
+    "scores": {
+      "relevance": 10.0,
+      "accuracy": 10.0,
+      "completeness": 10.0,
+      "clarity": 10.0,
+      "safety": 9.0,
+      "overall": 9.8,
+      "strengths": "The response provides relevant and detailed information about available cardiologists.",
+      "improvements": "Including a disclaimer about verifying the information or checking for recent reviews could enhance safety.",
+      "keyword_coverage": 10.0
+    },
+    "overall_score": 9.8
+  },
+  {
+    "id": 38,
+    "timestamp": "2026-03-04T16:49:33.934194",
+    "session_id": "chat_1772621065",
+    "type": "tool_call",
+    "tool_name": "list_all_patients",
+    "tool_args": {},
+    "result_preview": "{\"status\": \"success\", \"total_patients\": 6, \"patients\": [{\"Patient_ID\": \"P001\", \"Phone_number\": \"7982179305\", \"Email\": \"rahul16negi@gmail.com\", \"Name\": \"Rahul Negi\", \"Age\": 31, \"Gender\": \"Male\", \"Address\": \"Chattarpur\", \"Summary\": \"Rahul is a fit and healthy person. He is doing well in his life\", \"Pa",
+    "success": true,
+    "execution_time_ms": 61.12
+  },
+  {
+    "id": 39,
+    "timestamp": "2026-03-04T16:49:40.623079",
+    "session_id": "chat_1772621065",
+    "type": "interaction",
+    "user_input": "Show all patients",
+    "agent_response": "Here is the list of all registered patients in the healthcare system:\n\n1. **Rahul Negi**\n   - Age: 31\n   - Gender: Male\n   - Address: Chattarpur\n   - Summary: Fit and healthy person, doing well in life.\n   - Phone: 7982179305\n   - Email: rahul16negi@gmail.com\n\n2. **Rebeca Nagle**\n   - Age: 36\n   - Gender: Female\n   - Address: 9125 XYZ Hill St, Tigard, OR 97223\n   - Summary: N/A\n   - Phone: +1-541-950-0000\n   - Email: N/A\n\n3. **Ramesh Kulkarni**\n   - Age: 65\n   - Gender: Male\n   - Address: 52 Res",
+    "tools_used": [
+      "list_all_patients"
+    ],
+    "tool_count": 1,
+    "response_time_ms": 7477.25
+  },
+  {
+    "id": 40,
+    "timestamp": "2026-03-04T16:50:12.868308",
+    "session_id": "chat_1772621065",
+    "type": "tool_call",
+    "tool_name": "retrieve_patient_history",
+    "tool_args": {
+      "patient_name": "Mohan Kumar"
+    },
+    "result_preview": "{\"status\": \"success\", \"patient\": \"Mohan Kumar\", \"summary\": \"**Medical Summary for Patient: Ramesh Kulkarni**\\n\\n**Diagnosis:**\\n- Essential Hypertension (I10)\\n\\n**Medications:**\\n- Telmisartan 40mg once daily (OD)\\n\\n**Vital Signs:**\\n- Blood Pressure: 130/84 mmHg\\n- Pulse: 76 bpm\\n- Temperature: 9",
+    "success": true,
+    "execution_time_ms": 11343.8
+  },
+  {
+    "id": 41,
+    "timestamp": "2026-03-04T16:50:16.520096",
+    "session_id": "chat_1772621065",
+    "type": "interaction",
+    "user_input": "pl give me info about Mohan's health",
+    "agent_response": "Here is the health information for **Mohan Kumar**:\n\n### Medical Summary\n- **Diagnosis:** Fatty Liver\n- **Medications:** Vitamin E Capsules\n- **Vital Signs:**\n  - Blood Pressure: 130/90 mmHg\n  - Weight: 85 kg\n  - Height: 175 cm\n\n### Summary\nMohan Kumar has been diagnosed with fatty liver and is currently taking Vitamin E capsules. His blood pressure is within a normal range, but he is noted to have higher weight and experiences fatigue.\n\n### Recommendations\n- It is advisable for him to follow a ",
+    "tools_used": [
+      "retrieve_patient_history"
+    ],
+    "tool_count": 1,
+    "response_time_ms": 16328.34
+  },
+  {
+    "id": 42,
+    "timestamp": "2026-03-04T16:50:48.485779",
+    "session_id": "chat_1772621065",
+    "type": "tool_call",
+    "tool_name": "search_medical_information",
+    "tool_args": {
+      "query": "fatty liver"
+    },
+    "result_preview": "{\"status\": \"success\", \"query\": \"fatty liver\", \"summary\": \"### Overview\\nFatty liver disease is a condition characterized by the accumulation of fat in the liver. The liver is the largest organ in the body and plays a crucial role in digestion, energy storage, and detoxification. There are two primar",
+    "success": true,
+    "execution_time_ms": 11465.02
+  },
+  {
+    "id": 43,
+    "timestamp": "2026-03-04T16:50:55.927452",
+    "session_id": "chat_1772621065",
+    "type": "interaction",
+    "user_input": "pl get latest info about fatty lever",
+    "agent_response": "### Overview of Fatty Liver Disease\n\nFatty liver disease is characterized by the accumulation of fat in the liver, which is the largest organ in the body. There are two primary types:\n\n1. **Nonalcoholic Fatty Liver Disease (NAFLD)**: Occurs in individuals who drink little to no alcohol.\n2. **Alcoholic Fatty Liver Disease (AFLD)**: Associated with excessive alcohol consumption.\n\n### Key Symptoms or Features\nFatty liver disease often does not present noticeable symptoms in its early stages. Howeve",
+    "tools_used": [
+      "search_medical_information"
+    ],
+    "tool_count": 1,
+    "response_time_ms": 19866.25
+  },
+  {
+    "id": 44,
+    "timestamp": "2026-03-04T16:51:16.874297",
+    "session_id": "chat_1772621065",
+    "type": "tool_call",
+    "tool_name": "get_patient_by_name",
+    "tool_args": {
+      "name": "Mohan Kumar"
+    },
+    "result_preview": "{\"status\": \"success\", \"count\": 1, \"patients\": [{\"Patient_ID\": \"P006\", \"Phone_number\": \"+91-9876542345\", \"Email\": \"mohan.kumar@gmail.com\", \"Name\": \"Mohan Kumar\", \"Age\": 47, \"Gender\": \"Male\", \"Address\": \"B-5, Sector 19, Noida\", \"Summary\": \"N/A\", \"Patient ID\": \"P88837F27\", \"DOB\": \"30/05/2005\", \"Blood_G",
+    "success": true,
+    "execution_time_ms": 181.36
+  },
+  {
+    "id": 45,
+    "timestamp": "2026-03-04T16:51:18.931097",
+    "session_id": "chat_1772621065",
+    "type": "tool_call",
+    "tool_name": "get_patient_appointments",
+    "tool_args": {
+      "patient_id": "P006"
+    },
+    "result_preview": "{\"status\": \"success\", \"patient_id\": \"P006\", \"appointments\": [{\"slot_id\": \"S0066\", \"doctor_id\": \"D001\", \"doctor_name\": \"Dr. Priya Sharma\", \"specialty\": \"General Physician\", \"hospital\": \"Apollo Clinic, Pune\", \"date\": \"2026-03-05\", \"day\": \"Thursday\", \"time\": \"10:00\", \"status\": \"booked\", \"patient_id\": \"",
+    "success": true,
+    "execution_time_ms": 0.0
+  },
+  {
+    "id": 46,
+    "timestamp": "2026-03-04T16:51:20.229866",
+    "session_id": "ui_direct",
+    "type": "tool_call",
+    "tool_name": "cancel_appointment",
+    "tool_args": {
+      "slot_id": "S0066"
+    },
+    "result_preview": "{\"status\": \"success\", \"message\": \"Appointment cancelled for Mohan Kumar (Slot: S0066).\"}",
+    "success": true,
+    "execution_time_ms": 0.0
+  },
+  {
+    "id": 47,
+    "timestamp": "2026-03-04T16:51:20.265612",
+    "session_id": "chat_1772621065",
+    "type": "tool_call",
+    "tool_name": "cancel_appointment",
+    "tool_args": {
+      "slot_id": "S0066"
+    },
+    "result_preview": "{\"status\": \"success\", \"message\": \"Appointment cancelled for Mohan Kumar (Slot: S0066).\"}",
+    "success": true,
+    "execution_time_ms": 31.27
+  },
+  {
+    "id": 48,
+    "timestamp": "2026-03-04T16:51:22.155584",
+    "session_id": "chat_1772621065",
+    "type": "interaction",
+    "user_input": "cancel the appointment made by mohan",
+    "agent_response": "The appointment for **Mohan Kumar** with Dr. Priya Sharma on **March 5, 2026**, at **10:00 AM** has been successfully cancelled. \n\nIf you need any further assistance or wish to book a new appointment, please let me know!",
+    "tools_used": [
+      "get_patient_by_name",
+      "get_patient_appointments",
+      "cancel_appointment"
+    ],
+    "tool_count": 3,
+    "response_time_ms": 6368.26
+  },
+  {
+    "id": 49,
+    "timestamp": "2026-03-04T16:51:45.819453",
+    "session_id": "ui_direct",
+    "type": "tool_call",
+    "tool_name": "get_available_slots_for_doctor",
+    "tool_args": {
+      "doctor_id": "D001",
+      "num_days": 7
+    },
+    "result_preview": "{\"status\": \"success\", \"doctor_id\": \"D001\", \"slots\": [{\"slot_id\": \"S0001\", \"doctor_id\": \"D001\", \"doctor_name\": \"Dr. Priya Sharma\", \"specialty\": \"General Physician\", \"hospital\": \"Apollo Clinic, Pune\", \"date\": \"2026-03-04\", \"day\": \"Wednesday\", \"time\": \"09:00\", \"status\": \"available\", \"patient_id\": null,",
+    "success": true,
+    "execution_time_ms": 6.03
+  },
+  {
+    "id": 50,
+    "timestamp": "2026-03-04T17:13:22.438285",
+    "session_id": "ui_direct",
+    "type": "tool_call",
+    "tool_name": "find_doctors_by_specialty",
+    "tool_args": {
+      "specialty": "General Physician"
+    },
+    "result_preview": "{\"status\": \"success\", \"specialty\": \"General Physician\", \"doctors\": [{\"doctor_id\": \"D001\", \"name\": \"Dr. Priya Sharma\", \"specialty\": \"General Physician\", \"qualification\": \"MBBS, MD (Internal Medicine)\", \"hospital\": \"Apollo Clinic, Pune\", \"phone\": \"+91-98100-11001\", \"email\": \"priya.sharma@apolloclinic.",
+    "success": true,
+    "execution_time_ms": 2.36
+  },
+  {
+    "id": 51,
+    "timestamp": "2026-03-04T17:14:35.100702",
+    "session_id": "ui_direct",
+    "type": "tool_call",
+    "tool_name": "find_doctors_by_specialty",
+    "tool_args": {
+      "specialty": "General Physician"
+    },
+    "result_preview": "{\"status\": \"success\", \"specialty\": \"General Physician\", \"doctors\": [{\"doctor_id\": \"D001\", \"name\": \"Dr. Priya Sharma\", \"specialty\": \"General Physician\", \"qualification\": \"MBBS, MD (Internal Medicine)\", \"hospital\": \"Apollo Clinic, Pune\", \"phone\": \"+91-98100-11001\", \"email\": \"priya.sharma@apolloclinic.",
+    "success": true,
+    "execution_time_ms": 5.59
+  },
+  {
+    "id": 52,
+    "timestamp": "2026-03-04T17:15:14.637794",
+    "session_id": "ui_direct",
+    "type": "tool_call",
+    "tool_name": "get_available_slots_for_doctor",
+    "tool_args": {
+      "doctor_id": "D001",
+      "num_days": 7
+    },
+    "result_preview": "{\"status\": \"success\", \"doctor_id\": \"D001\", \"slots\": [{\"slot_id\": \"S0001\", \"doctor_id\": \"D001\", \"doctor_name\": \"Dr. Priya Sharma\", \"specialty\": \"General Physician\", \"hospital\": \"Apollo Clinic, Pune\", \"date\": \"2026-03-04\", \"day\": \"Wednesday\", \"time\": \"09:00\", \"status\": \"available\", \"patient_id\": null,",
+    "success": true,
+    "execution_time_ms": 14.32
+  },
+  {
+    "id": 53,
+    "timestamp": "2026-03-04T17:15:28.370484",
+    "session_id": "ui_direct",
+    "type": "tool_call",
+    "tool_name": "book_appointment",
+    "tool_args": {
+      "slot_id": "S0193",
+      "patient_id": "P004",
+      "patient_name": "Anjali Mehra"
+    },
+    "result_preview": "{\"status\": \"success\", \"message\": \"Appointment booked successfully for Anjali Mehra.\", \"booking_details\": {\"slot_id\": \"S0193\", \"patient_id\": \"P004\", \"patient_name\": \"Anjali Mehra\", \"doctor_name\": \"Dr. Priya Sharma\", \"specialty\": \"General Physician\", \"hospital\": \"Apollo Clinic, Pune\", \"date\": \"2026-03",
+    "success": true,
+    "execution_time_ms": 0.0
+  },
+  {
+    "id": 54,
+    "timestamp": "2026-03-04T17:17:11.950313",
+    "session_id": "ui_direct",
+    "type": "tool_call",
+    "tool_name": "find_doctors_by_specialty",
+    "tool_args": {
+      "specialty": "General Physician"
+    },
+    "result_preview": "{\"status\": \"success\", \"specialty\": \"General Physician\", \"doctors\": [{\"doctor_id\": \"D001\", \"name\": \"Dr. Priya Sharma\", \"specialty\": \"General Physician\", \"qualification\": \"MBBS, MD (Internal Medicine)\", \"hospital\": \"Apollo Clinic, Pune\", \"phone\": \"+91-98100-11001\", \"email\": \"priya.sharma@apolloclinic.",
+    "success": true,
+    "execution_time_ms": 1.01
+  },
+  {
+    "id": 55,
+    "timestamp": "2026-03-04T17:17:15.798096",
+    "session_id": "ui_direct",
+    "type": "tool_call",
+    "tool_name": "get_available_slots_for_doctor",
+    "tool_args": {
+      "doctor_id": "D001",
+      "num_days": 7
+    },
+    "result_preview": "{\"status\": \"success\", \"doctor_id\": \"D001\", \"slots\": [{\"slot_id\": \"S0001\", \"doctor_id\": \"D001\", \"doctor_name\": \"Dr. Priya Sharma\", \"specialty\": \"General Physician\", \"hospital\": \"Apollo Clinic, Pune\", \"date\": \"2026-03-04\", \"day\": \"Wednesday\", \"time\": \"09:00\", \"status\": \"available\", \"patient_id\": null,",
+    "success": true,
+    "execution_time_ms": 2.07
+  }
+]
